@@ -1,0 +1,9 @@
+
+.k-wizard-content>div{
+    margin-left: auto;
+    margin-right: auto;
+    width:fit-content
+}
+.k-wizard-content>div>*{
+    margin-bottom: 12px;
+}

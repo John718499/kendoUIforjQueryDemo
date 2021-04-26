@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kendoUIdemo</title>
+
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2021.1.330/styles/kendo.default-v2.min.css" />
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2021.1.330/js/kendo.all.min.js"></script>
+</head>
+
+<body>
+    <div id="grid"></div>
+    <script>
+        let grid
+        grid = $('#grid').kendoGrid({
+            dataSource: {
+                transport: {
+                    read: {
+                        url: "./griddata.json"
+                    }
+                }
+            },
+            sortable: true,
+            filterable: true,
+            selectable: "multiple,row",
+            columns: [
+                { 
+                    selectable: true 
+                },
+                {
+                    field: "Apr21",
+                    title: "21四月",
+                }, {
+                    field: "Apr20",
+                    title: "20四月",
+                }, {
+                    field: "ProgrammingLanguage",
+                    title: "語言",
+                }, {
+                    field: "Ratings",
+                    title: "比例",
+                }, {
+                    field: "Change",
+                    title: "變動",
+                },
+            ]
+        }).data('kendoGrid')
+    </script>
+</body>
+
+</html>

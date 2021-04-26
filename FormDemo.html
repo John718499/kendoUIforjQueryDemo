@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kendoUIdemo</title>
+
+    <link rel="stylesheet" href="./FormDemo.css">
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2021.1.330/styles/kendo.default-v2.min.css" />
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2021.1.330/js/kendo.all.min.js"></script>
+    <script src="./FormDemo.js"></script>
+</head>
+
+<body>
+    <div id="wizard"></div>
+    <div id="step1">
+        <div>
+            <label>姓名</label>
+            <input type="text" class="k-textbox" data-bind="value:name" name="name" required>
+        </div>
+        <div>
+            <label>聯絡電話</label>
+            <input type="tel" pattern="09[0-9]{8}" validationMessage="請輸入正確聯絡電話" class="k-textbox" data-bind="value:phone" name="phone" required>
+        </div>
+        <div>
+            <label>信箱</label>
+            <input type="email" class="k-textbox" data-bind="value:email" name="email" required>
+        </div>
+        
+        <button class="k-button next">下一步</button>
+    </div>
+
+
+    <div id="step2">
+        <div>
+            <label>姓別</label>
+            
+            <input type="radio" data-bind="checked:sex" value="man" name="sex">
+            <span>男</span>
+            <input type="radio" data-bind="checked:sex" value="woman" name="sex">
+            <span>女</span>
+        </div>
+        <div>
+            <label>縣市</label>
+            <input id="area" type="text" data-bind="value:area">
+        </div>
+        <div>
+            <label>地址</label>
+            <input type="text" class="k-textbox" data-bind="value:address">
+        </div>
+        <button class="k-button previous">上一步</button>
+        <button id="send" class="k-button">送出</button>
+    </div>
+
+    
+</body>
+
+</html>
